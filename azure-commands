@@ -1,0 +1,96 @@
+__________________________________
+Azure CLI comandos básicos
+__________________________________
+
+< LOGIN >
+
+-> az login
+
+-> az login --use-device-code
+
+-> az login --service-principal -u -p -t
+
+-> az login --identity
+
+______________________________________________
+< LOGOUT >
+
+az logout [--username]
+
+_______________________________________________
+
+az account list
+_______________________________________________
+
+< AZ GROUP >
+
+az group create
+
+   --location brazilsouth
+   --resource-group nomedogrupo
+____________________________________________________
+< AZ VM Linux >
+
+az vm create
+   -n vm-linux
+   -g nomedogrupo
+   --image UbuntuLTS
+____________________________________________________
+
+< AZ VM WINDOWS >
+
+az vm create
+   --resource-group nome do grupo
+   --name vm-windows
+   --image win2016datacenter
+
+____________________________________________________
+
+< Start VM >
+
+az vm start
+   --resource-group nomedogrupo
+   --name vm-windows
+
+____________________________________________________
+
+< Stop VM >
+
+az vm stop
+   --resource-group nomedogrupo
+   --name vm-windows
+
+____________________________________________________
+
+< Desalocar VM >
+
+az vm deallocate
+   --resource-group nomedogrupo
+   --name vm-windows
+____________________________________________________
+
+< Reiniciar VM >
+
+az vm restart
+   --resource-group nomedogrupo
+   --name vm-windows
+
+____________________________________________________
+
+< Novo deployment do recurso > 
+
+az vm redeploy
+   --resource-group nomedogrupo
+   --name vm-windows
+
+___________________________________________________
+
+Listar VMs
+
+az vm list
+
+Conferir tamanhos de vm em uma determinada região do azure
+
+az vm list-sizes --location eastus
+
+_____________________________________________________
